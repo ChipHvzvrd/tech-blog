@@ -97,10 +97,18 @@ router.post('/login', (req, res) => {
   });
 });
 
-router.put('/:id', (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
+});
 
-  // pass in req.body instead to only update what's passed through
+router.put('/:id', (req, res) => {
   User.update(req.body, {
     individualHooks: true,
     where: {

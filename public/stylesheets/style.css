@@ -1,28 +1,37 @@
+:root {
+    --color-light: #C4A287;
+    --color-dark: #533745;
+    --color-green:#9D9171;
+    --color-brown: #B07156;
+    --color-red: #AB4E68;
+}
+
 * {
     box-sizing: border-box;
   }
   
   body, html {
+    background-color: var(--color-light);
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
-    color: #333;
+    font-family: 'Poor Story', cursive;
+    color: var(--color-dark);
   }
   
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: var(--color-dark);
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
-    color: #3486eb;
+    color: var(--color-red);
   }
   
   button {
-    background-color: #225ca3;
+    background-color: var(--color-red);
     border: 0;
     padding: 1%;
     color: white;
@@ -33,7 +42,7 @@
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: var(--color-brown);
   }
   
   .post-list {
@@ -97,7 +106,7 @@
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
+    color: var(--color-dark);
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -106,7 +115,7 @@
   
   .btn-no-style:hover {
     background: none;
-    color: #3486eb;
+    color: var(--color-green);
   }
   
   .delete-post-btn {
